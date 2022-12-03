@@ -13,10 +13,16 @@
     
     <categories>
       
-      <category>Hexo_blog</category>
+      <category>Blogs</category>
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>Hexo搭建blog</tag>
+      
+    </tags>
     
   </entry>
   
