@@ -254,7 +254,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/blog/2022/12/02/first_post/" target="_self">
         <div>
-          Firstly, welcome to Yao’s blog! 这是基于 Hexo 搭建的第一个博客，有关 Hexo 的任何使用和其它问题建议参考 GitHub 或 troubleshooting. 博客搭建流程主要参考的网络资源(1) CSDN 上的’史上最全教程’博客(2) 腾讯云上的 win10 搭建 hexo 的博客 基础软件安装 (win10)GitNodejs 12345# 版本检查，
+          Firstly, welcome to Yao's blog! 这是基于 Hexo 搭建的第一个博客，有关 Hexo 的任何使用和其它问题建议参考 GitHub 或 troubleshooting. 博客搭建流程 主要参考的网络资源 (1) CSDN 上的'史上最全教程'博客 (2) 腾讯云上的 win10 搭建 hexo 的博客 基础软件安装 (win10) Git Node
         </div>
       </a>
 
@@ -267,6 +267,27 @@
             </time>
           </div>
         
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/Hexo-blog/" class="category-chain-item">Hexo_blog</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
         
         
       </div>
@@ -344,6 +365,42 @@
   
 </div>
     
+
+  <!--《添加网站运行时间 -->
+  <!--<br/>-->
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+    var now = new Date();
+
+    function createtime() {
+      var grt = new Date("12/02/2022 12:00:00"); //建站时间
+      now.setTime(now.getTime() + 250);
+      days = (now - grt) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+      hnum = Math.floor(hours);
+      if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+      }
+      minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+      mnum = Math.floor(minutes);
+      if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+      }
+      seconds =
+        (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+      snum = Math.round(seconds);
+      if (String(snum).length == 1) {
+        snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML =
+        " | 小破站已安全运行 " + dnum + " 天 ";
+      document.getElementById("times").innerHTML =
+        hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()", 250);
+  </script>
+  <!-- 添加网站运行时间》 -->
 </div>
 
   </footer>
