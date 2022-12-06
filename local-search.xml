@@ -4,23 +4,23 @@
   
   
   <entry>
-    <title>基于obsidian配置个人工作流</title>
+    <title>基于obsidian的个人工作流配置指南</title>
     <link href="/blog/2022/12/06/%E5%9F%BA%E4%BA%8EObsidian%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%B7%A5%E4%BD%9C%E6%B5%81%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/"/>
     <url>/blog/2022/12/06/%E5%9F%BA%E4%BA%8EObsidian%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%B7%A5%E4%BD%9C%E6%B5%81%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
     
-    <content type="html"><![CDATA[<h3 id="obsidian-和-hexo-blog-同步">Obsidian 和 Hexo blog 同步</h3><blockquote><p>想法：使用 <em>obsidian</em> 建立工作流管理资源，在 <em>obsidian</em>中以 Markdown 格式编辑 <em>blog</em> ，采用 <em>obsidian</em> 导出的<em>PDF</em> 的形式发布博文。</p></blockquote><hr /><h5 id="hexo-安装-pdf-插件">Hexo 安装 PDF 插件</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ npm install --save hexo-pdf<br></code></pre></td></tr></table></figure><h5 id="下载配置-pdf.js">下载配置 PDF.js</h5><p>在 <a href="https://mozilla.github.io/pdf.js">PDF.js</a> 官网下载older browsers 版本，以防兼容性问题。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># PDF.js 可以配置全平台使用</span><br><br>      // <span class="hljs-keyword">if</span> (fileOrigin !== viewerOrigin) &#123;<br>        // throw new Error(<span class="hljs-string">&quot;file origin does not match viewer&#x27;s&quot;</span>);<br>      // &#125;<br></code></pre></td></tr></table></figure><iframe src="/pdfjs/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf" width="100%" height="100%"></iframe>]]></content>
+    <content type="html"><![CDATA[<h3 id="pdf-内嵌">PDF 内嵌</h3><iframe src="/pdfjs/web/viewer.html?file=/img/基于Obsidian的个人工作流配置指南.pdf" style="width:100%;height:100%"></iframe>]]></content>
     
     
     <categories>
       
-      <category>使用obsidian配置个人工作流</category>
+      <category>Tools</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>Obsidian工作流配置</tag>
+      <tag>obsidian工作流</tag>
       
     </tags>
     
