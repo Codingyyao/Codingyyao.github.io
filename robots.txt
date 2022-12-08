@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /categories/
+Allow: /about/
+Allow: /blog/
+
+
+
+Disallow: /pdfjs/
+Disallow: /js/
+Disallow: /css/
+Disallow: /lib/
+
+Sitemap: https://codingyyao.github.io/sitemap.xml
+Sitemap: https://codingyyao.github.io/baidusitemap.xml
