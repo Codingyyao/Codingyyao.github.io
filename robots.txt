@@ -6,8 +6,5 @@ Allow: /about/
 Allow: /blog/
 
 
-
-Disallow: /pdfjs/
-
 Sitemap: https://csdecoder.tk//sitemap.xml
 Sitemap: https://csdecoder.tk//baidusitemap.xml
