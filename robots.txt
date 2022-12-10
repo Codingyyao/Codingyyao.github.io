@@ -6,5 +6,5 @@ Allow: /about/
 Allow: /blog/
 
 
-Sitemap: https://csdecoder.tk//sitemap.xml
-Sitemap: https://csdecoder.tk//baidusitemap.xml
+Sitemap:  https://csdecoder.tk/sitemap.xml
+Sitemap: https://csdecoder.tk/baidusitemap.xml
