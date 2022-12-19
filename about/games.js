@@ -157,60 +157,71 @@ class EvilCircle extends Shape {
 // 简单的想法是在screen上设置一个 小键盘 a w s d就行！
 
 
-  setControls() {
-
-    for (let i=0; i<btn.length; i++)
-    {
-        btn[i].onclick = e =>  {
-
-        switch(e.target.id) {
-            case 'a':
-            this.x -= this.velX;
-            break;
-            case 'd':
-            this.x += this.velX;
-            break;
-            case 'w':
-            this.y -= this.velY;
-            break;
-            case 's':
-            this.y += this.velY;
-            break;
-        }
-
-    }
-
-    };
+setControls() {
+    window.onkeydown = e => {
+  switch(e.key) {
+    case 'a':
+      this.x -= this.velX;
+      break;
+    case 'd':
+      this.x += this.velX;
+      break;
+    case 'w':
+      this.y -= this.velY;
+      break;
+    case 's':
+      this.y += this.velY;
+      break;
+  }
+};
+}
 }
 
-  collisionDetect() {
-    for (let j = 0; j < balls.length; j++) {
-    if (balls[j].exists) {
-    const dx = this.x - balls[j].x;
-    const dy = this.y - balls[j].y;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-
-    if (distance < this.size + balls[j].size) {
-    balls[j].exists = false;
-    count--;
-    insertp.textContent = '剩余小球数：' + count + ' 个！';
-    }}}
-
-}
-
-
-
-}
 
 // draw a ball in screen;
-//Ball.prototype.draw = function() {
-  //ctx.beginPath();
-  //ctx.fillStyle = this.color;
-  //ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
- // ctx.fill();
-//}
+Ball.prototype.draw = function() {
+  ctx.beginPath();
+  ctx.fillStyle = this.color;
+  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.fill();
+}
 
 // let testBall = new Ball(50, 100, 4, 4, 'blue', 10);
+Ball.prototype.update = function() {
+  if ((this.x + this.size) >= width) {
+    this.velX = -(this.velX);
+  }
+
+  if ((this.x - this.size) <= 0) {
+    this.velX = -(this.velX);
+  }
+
+  if ((this.y + this.size) >= height) {
+    this.velY = -(this.velY);
+  }
+
+  if ((this.y - this.size) <= 0) {
+    this.velY = -(this.velY);
+  }
+
+  this.x += this.velX;
+  this.y += this.velY;
+}
+
+Ball.prototype.collisionDetect = function() {
+  for (let j = 0; j < balls.length; j++) {
+    if (this !== balls[j]) {
+      const dx = this.x - balls[j].x;
+      const dy = this.y - balls[j].y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.size + balls[j].size) {
+        balls[j].color = this.color = randomColor();
+      }
+    }
+  }
+}
+
 
 // 检测小球是否靠近边缘，调整速度方向；
 
@@ -229,32 +240,20 @@ while (balls.length < 25) {
       random(-7, 7),
       random(-7, 7),
       randomColor(),
-      size,
-      'true'
+      size
     );
     balls.push(ball);
-    count++;
-    insertp.textContent = '剩余小球数：' + count + ' 个！';
   }
 
-
-let evilCircle = new EvilCircle (200, 200, 20, 20, 'whikte',20,'ture');
-evilCircle.setControls();
-
-  function loop() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+function loop() {
+  ctx.fillStyle = 'rgba(237, 59, 59, 0.25);';
   ctx.fillRect(0, 0, width, height);
-  var bcount = 0;
 
   for (let i = 0; i < balls.length; i++) {
-    if (balls[i].exists){
     balls[i].draw();
     balls[i].update();
     balls[i].collisionDetect();
-    bcount++; }
   }
-  evilCircle.draw();
-  evilCircle.collisionDetect();
 
   requestAnimationFrame(loop);
 }

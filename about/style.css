@@ -2,7 +2,7 @@
 body {
     font-family: sans-serif;
     box-sizing: border-box;
-    width: 90vw;
+    width: 100vw;
     height: 90vw;
     margin: 0 auto;
     text-align: center;
@@ -10,7 +10,7 @@ body {
 
 nav {
     text-align: right;
-    margin: 50px 10px;
+    margin: 50px 50px;
     font-size: 1.5rem;
     font-weight: 600;
     color: rgb(231, 81, 81);
@@ -127,12 +127,12 @@ article img {
 }
 
 section {
-width: 80vw;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 3fr;
-grid-gap: 80px;
-margin: 0px auto;
-margin-bottom: 20px;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 20px auto;
+    margin-bottom: 20px;
 
 }
 
@@ -146,14 +146,17 @@ section button {
 section button span {
 
     font-weight: 600;
+    margin-left: 20px;
     color: gray;
-    border: 2px solid rgba(128, 128, 15px28, 0.1);
+    border: 2px solid rgba(128, 128, 128, 0.1);
     cursor: pointer;
     transition: all 0.5s;
 }
 
+
 section button:hover span {
-    padding-right: 5px;
+    padding-right: 2px;
+    padding-left: 2px;
 }
 
 section button:hover span:after {
@@ -161,26 +164,29 @@ section button:hover span:after {
     right: 0;
 }
 
-.logo-img {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 3fr;
-    width: 80vw;
-    margin: 0 auto;
-    background: none;
-    grid-gap: 80px;
-    position: relative;
-    left: 10px;
 
+section #email {
+    background: url(images/email.png) no-repeat;
+    background-size: contain;
+    width: 100px;
 }
 
-.logo-img img {
-    margin-top: 20px;
-    width: 60px;
+section #location {
+    background: url(images/location.png) no-repeat;
+    background-size: contain;
+    width: 120px;
+}
+
+section #github {
+    background: url(images/github.png) no-repeat;
+    background-size: contain;
+    width: 100px;
 }
 
 .interest {
     background-image: url(images/coding-life.jpg);
     background-size: contain;
+    margin-bottom: 50px;
 }
 
 .interest h3, .contact {
@@ -205,9 +211,12 @@ footer {
     color: rgba(0, 0, 0, 0.7);
     font-weight: 600;
     font-family: 'Times New Roman', Times, serif;
-    margin: 10px 50px;
-    width: 80vw;
+    width: 100vw;
     text-align: center;
     margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+figcaption{
+    margin: 0 0;
 }
