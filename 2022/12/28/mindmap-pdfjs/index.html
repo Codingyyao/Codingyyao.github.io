@@ -18,29 +18,28 @@
   <meta name="author" content="yuyao yang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="主要内容  最近在看 cs61a，原版的 textbook 中很多地方想做标注，就顺便利用 LaTex 整理了笔记。   主要借助了 nexus 模板和 xeboiboites 模板,简要记录下主要的 LaTex 语法。  nexus (1) 封面 nexus 模板的 cover 主要在 titlepage.tex 文件中，由多个 textblock 组合成，在正文中通过">
+    <meta name="description" content="主要内容  使用 obsidian 做笔记的时候，不想再打开文献管理软件 zotero 查看 PDF 文件。 发现可以利用插件 makemind 和 PDFjs 直接实现在 ob 里面直接标注 PDF 文件，同时还可以直接建立对应的思维导图。 感觉是非常不错的辅助工作流，记录下主要步骤。  参考链接  obsidian mark mind 用户手册 PC 端 PDFjs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LaTex笔记001-借助nexus模板">
-<meta property="og:url" content="https://csdecoder.tk/2022/12/27/latex-init/index.html">
+<meta property="og:title" content="在obsidian中实现PDF标注并同步建立Mindmap">
+<meta property="og:url" content="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/index.html">
 <meta property="og:site_name" content="Yao&#39;s blog">
-<meta property="og:description" content="主要内容  最近在看 cs61a，原版的 textbook 中很多地方想做标注，就顺便利用 LaTex 整理了笔记。   主要借助了 nexus 模板和 xeboiboites 模板,简要记录下主要的 LaTex 语法。  nexus (1) 封面 nexus 模板的 cover 主要在 titlepage.tex 文件中，由多个 textblock 组合成，在正文中通过">
+<meta property="og:description" content="主要内容  使用 obsidian 做笔记的时候，不想再打开文献管理软件 zotero 查看 PDF 文件。 发现可以利用插件 makemind 和 PDFjs 直接实现在 ob 里面直接标注 PDF 文件，同时还可以直接建立对应的思维导图。 感觉是非常不错的辅助工作流，记录下主要步骤。  参考链接  obsidian mark mind 用户手册 PC 端 PDFjs">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://csdecoder.tk/2022/12/27/latex-init/notes1.png">
-<meta property="og:image" content="https://csdecoder.tk/2022/12/27/latex-init/notes2.png">
-<meta property="article:published_time" content="2022-12-27T09:30:56.000Z">
-<meta property="article:modified_time" content="2022-12-29T07:50:26.002Z">
+<meta property="og:image" content="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/page.png">
+<meta property="og:image" content="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/pdfjs.png">
+<meta property="og:image" content="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/mindmap.png">
+<meta property="article:published_time" content="2022-12-29T07:49:52.000Z">
+<meta property="article:modified_time" content="2022-12-29T08:35:38.132Z">
 <meta property="article:author" content="yuyao yang">
-<meta property="article:tag" content="csdiy">
-<meta property="article:tag" content="latex">
-<meta property="article:tag" content="cs61a">
+<meta property="article:tag" content="obsidian工作流">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://csdecoder.tk/2022/12/27/latex-init/notes1.png">
+<meta name="twitter:image" content="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/page.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>LaTex笔记001-借助nexus模板 - Yao&#39;s blog</title>
+  <title>在obsidian中实现PDF标注并同步建立Mindmap - Yao&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -222,7 +221,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="LaTex笔记001-借助nexus模板"></span>
+            <span id="subtitle" data-typed-text="在obsidian中实现PDF标注并同步建立Mindmap"></span>
           
         </div>
 
@@ -233,8 +232,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-12-27 01:30" pubdate>
-          2022年12月27日 凌晨
+        <time datetime="2022-12-28 23:49" pubdate>
+          2022年12月28日 晚上
         </time>
       </span>
     
@@ -245,7 +244,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          660 字
         
       </span>
     
@@ -256,7 +255,7 @@
         
         
         
-          22 分钟
+          6 分钟
         
       </span>
     
@@ -302,47 +301,81 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">LaTex笔记001-借助nexus模板</h1>
+            <h1 style="display: none">在obsidian中实现PDF标注并同步建立Mindmap</h1>
             
             
               <div class="markdown-body">
                 
                 <h5 id="主要内容">主要内容</h5>
-<p><font color="darkblue" size="2"> 最近在看 <code>cs61a</code>，原版的
-<code>textbook</code> 中很多地方想做标注，就顺便利用 <code>LaTex</code>
-整理了笔记。</font></p>
+<p><font color="black" size="2"></font></p>
+<p>使用 <code>obsidian</code> 做笔记的时候，不想再打开文献管理软件
+<code>zotero</code> 查看 PDF 文件。</p>
+<p>发现可以利用插件 <code>makemind</code> 和 <code>PDFjs</code>
+直接实现在 ob 里面直接标注 PDF
+文件，同时还可以直接建立对应的思维导图。</p>
+<p>感觉是非常不错的辅助工作流，记录下主要步骤。</p>
+<p></p>
+<h5 id="参考链接">参考链接</h5>
 <blockquote>
-<p><font color="black" size="2"> 主要借助了 <b>nexus</b> 模板和
-<b>xeboiboites</b> 模板,简要记录下主要的 LaTex 语法。</font></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/MarkMindCkm/obsidian-markmind/blob/main/docs/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md">obsidian
+mark mind 用户手册</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/MarkMindCkm/obsidian-markmind/releases/download/1.5.9/pdfjs.zip">PC
+端 PDFjs 下载地址</a></p>
 </blockquote>
-<h5 id="nexus">nexus</h5>
-<h6 id="封面">(1) 封面</h6>
-<p><font color="darkblue" size="2">nexus 模板的 cover 主要在
-<code>titlepage.tex</code> 文件中，由多个 <code>textblock</code>
-组合成，在正文中通过 <code>include&#123;titlepage&#125;</code> 插入; </font></p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% textblock example</span><br><span class="hljs-keyword">\begin</span>&#123;textblock&#125;&#123;1&#125;(.1,.09)<br>    <span class="hljs-keyword">\noindent</span>&#123;<span class="hljs-keyword">\fontsize</span>&#123;24.88&#125;&#123;2&#125;<span class="hljs-keyword">\selectfont</span><br>        <span class="hljs-keyword">\bfseries</span><span class="hljs-keyword">\textcolor</span>&#123;white&#125;&#123;SICP Notes&#125;&#125;<br><span class="hljs-keyword">\end</span>&#123;textblock&#125;<br></code></pre></td></tr></table></figure>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% insert titlepage into main text</span><br><span class="hljs-keyword">\include</span>&#123;titlepage&#125;<br></code></pre></td></tr></table></figure>
-<h6 id="正文部分">(2) 正文部分</h6>
-<p><font color="darkblue" size="2">主要的 latex 语法和注释如下： </font></p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 定义文档类型</span><br><span class="hljs-keyword">\documentclass</span>[12pt,oneside]&#123;book&#125;<br><br><span class="hljs-comment">% bib引文</span><br><span class="hljs-keyword">\usepackage</span>[backend=bibtex]&#123;biblatex&#125;<br><br><span class="hljs-comment">% 借助宏包定义文档Geometry</span><br><span class="hljs-keyword">\usepackage</span>[a4paper,left=1.91cm,right=1.91cm, bottom=2.5cm,top=2.5cm]&#123;geometry&#125;<br><br><span class="hljs-comment">% 一些必备的宏包</span><br><span class="hljs-keyword">\usepackage</span>[utf8]&#123;inputenc&#125;<br><span class="hljs-keyword">\usepackage</span>&#123;xeboiboites&#125;<br><span class="hljs-keyword">\usepackage</span>&#123;verbatim&#125;<br><span class="hljs-keyword">\usepackage</span>&#123;amsmath,amssymb&#125;<br><span class="hljs-keyword">\DeclareTextFontCommand</span>&#123;<span class="hljs-keyword">\emph</span>&#125;&#123;<span class="hljs-keyword">\bfseries</span>&#125;<br><span class="hljs-keyword">\usepackage</span>[english]&#123;babel&#125;<br><span class="hljs-keyword">\usepackage</span>&#123;amsmath&#125;<br><span class="hljs-keyword">\usepackage</span>&#123;ctex&#125; <span class="hljs-comment">% chinese</span><br><span class="hljs-keyword">\usepackage</span>&#123;fontspec&#125;<br><span class="hljs-keyword">\setmainfont</span>&#123;Times New Roman&#125;<br><br><span class="hljs-comment">%采用nexus模板并设置主题</span><br><span class="hljs-keyword">\usepackage</span>[palette=munch]&#123;nexus&#125;<br><br><span class="hljs-comment">% color</span><br><span class="hljs-keyword">\usepackage</span>&#123;xcolor&#125;<br><br><span class="hljs-comment">% hyperref</span><br><span class="hljs-keyword">\usepackage</span>[verbose]&#123;hyperref&#125;<br><span class="hljs-keyword">\hypersetup</span>&#123;<br>    hidelinks<br>&#125;<br><span class="hljs-comment">%\usepackage[colorlinks,linkcolor=blue]&#123;hyperref&#125;</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs latex"><br><span class="hljs-comment">% main text</span><br><span class="hljs-keyword">\begin</span>&#123;document&#125;<br><br><span class="hljs-comment">% titlepage</span><br><span class="hljs-keyword">\include</span>&#123;titlepage&#125;<br><br><span class="hljs-comment">% 设置行距</span><br><span class="hljs-keyword">\renewcommand</span>&#123;<span class="hljs-keyword">\baselinestretch</span>&#125;&#123;1.5&#125;<br><br><span class="hljs-comment">% contents</span><br><span class="hljs-keyword">\tableofcontents</span><br><br><span class="hljs-comment">% chapter &amp; section &amp; subsection</span><br><span class="hljs-keyword">\chapter</span>&#123;&#125;<br><span class="hljs-keyword">\section</span>&#123;&#125;<br><span class="hljs-keyword">\subsection</span>&#123;&#125;<br><br><span class="hljs-comment">% appendix</span><br><span class="hljs-keyword">\begin</span>&#123;appendices&#125;<br>    &#x27;there also are multiple sections&#x27;<br><span class="hljs-keyword">\end</span>&#123;appendices&#125;<br>    ...<br><span class="hljs-keyword">\end</span>&#123;document&#125;<br></code></pre></td></tr></table></figure>
-<h5 id="xeboiboites">xeboiboites</h5>
-<h6 id="构建组件">(1) 构建组件</h6>
-<p><font color="darkblue" size="2">在文章中添加一些摘抄段落和代码部分，可通过
-xeboiboites 实现，首先构建 boxes： </font></p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-comment">% 定义不同类型的box和使用方式</span><br><br><span class="hljs-comment">%定义摘抄的box格式</span><br><span class="hljs-keyword">\newboxedtheorem</span>[small box style=&#123;fill=blue!20,draw=black, line width=.7pt,<br>                                    decoration=&#123;penciline&#125;,decorate&#125;,<span class="hljs-comment">%</span><br>    big box style=&#123;fill=blue!10,draw=black,thick,<br>        decoration=&#123;penciline&#125;,decorate&#125;,<br>    headfont=<span class="hljs-keyword">\bfseries</span>]<span class="hljs-comment">%</span><br>    &#123;propb&#125;&#123;Excerpts&#125;&#123;&#125;<br><br><span class="hljs-comment">%定义想法的box格式</span><br><span class="hljs-keyword">\newspanning</span>[image=bulb,headfont=<span class="hljs-keyword">\bfseries</span>,<span class="hljs-comment">%</span><br>    spanning style=&#123;very thick,decoration=penciline,decorate&#125;]<span class="hljs-comment">%</span><br>    &#123;method&#125;&#123;Thoughts&#125;&#123;&#125;<br></code></pre></td></tr></table></figure>
-<h6 id="使用组件">(2) 使用组件</h6>
-<p><font color="darkblue" size="2">在文章使用 boxes： </font></p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs latex"><br><span class="hljs-comment">% 添加摘抄</span><br><span class="hljs-keyword">\begin</span>&#123;prob&#125;[...]<br><span class="hljs-keyword">\end</span>&#123;propb&#125;<br><br><span class="hljs-comment">% 添加想法</span><br><span class="hljs-keyword">\begin</span>&#123;method&#125;[...]<br><span class="hljs-keyword">\end</span>&#123;method&#125;<br></code></pre></td></tr></table></figure>
-<h6 id="组件效果">(3) 组件效果</h6>
-<p><img src="https://csdecoder.tk/2022/12/27/latex-init/notes1.png" srcset="/img/loading.gif" lazyload alt="摘抄"></p>
-<p><img src="https://csdecoder.tk/2022/12/27/latex-init/notes2.png" srcset="/img/loading.gif" lazyload alt="想法"></p>
-<h5 id="完整笔记示例">完整笔记示例</h5>
-<blockquote>
-<p><font size="2">学习笔记示例：</font></p>
-</blockquote>
-<iframe src="/pdfjs/web/viewer.html?file=https://csdecoder.tk/2022/12/27/latex-init/sicp-notes.pdf" frameborder="0" width="100%" height="550">
-</iframe>
+<h6 id="安装插件">(1) 安装插件</h6>
+<p><font color="darkblue" size="2"></font></p>
+<ol type="1">
+<li><p>安装第三方插件 makemind，直接在 ob 插件库检索安装即可;</p></li>
+<li><p>PDFjs 直接下载，解压后，记录下绝对路径
+<code>~/PDFjs/</code>;</p></li>
+</ol>
+<p></p>
+<h6 id="插件设置">(2) 插件设置</h6>
+<p><font color="darkblue" size="2"></font></p>
+<ol type="1">
+<li>在 makemind 插件设置界面，将 PDFjs 的<b>绝对路径</b>填入；</li>
+<li>打开 makemind 的<b>协议跳转 pdf </b>选项；</li>
+<li>打开 makemind <b>自动生成节点</b>选项；</li>
+<li>其它选项可选择性自定义，比如 PDF image 的默认保存地址；</li>
+</ol>
+<p></p>
+<h6 id="思维导图和-pdf-标注使用">(3) 思维导图和 PDF 标注使用</h6>
+<p><font color="darkblue" size="2"></font></p>
+<ol type="1">
+<li>新建思维导图文件，yaml 写法如下：</li>
+</ol>
+<p></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">mindmap-plugin:</span> <span class="hljs-string">rich</span><br><span class="hljs-attr">display-mode:</span> <span class="hljs-string">outline</span> <span class="hljs-comment"># 大纲显示</span><br><span class="hljs-attr">mindmap-theme:</span> <span class="hljs-string">whiteboard</span> <span class="hljs-comment"># mindmap 主题</span><br></code></pre></td></tr></table></figure>
+<p><font color="darkblue" size="2"></font></p>
+<ol start="2" type="1">
+<li>在文件中链接 PDF 文件</li>
+</ol>
+<p> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">[[fielname.pdf]]<br></code></pre></td></tr></table></figure></p>
+<p><font color="darkblue" size="2"></font></p>
+<ol start="3" type="1">
+<li>点击 PDF 文件链接即可跳转至 PDFjs
+标注界面，选择思维导图视图即可查看当前思维导图，界面示例如下：</li>
+</ol>
+<p>
+<img src="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/page.png" srcset="/img/loading.gif" lazyload alt="ob页面布局"></p>
+<p><font color="darkblue" size="2"></font></p>
+<ol start="4" type="1">
+<li>PDFjs 标注界面可以标注不同颜色，可以在左侧添加
+notes，也可以在右上角使用截图。</li>
+</ol>
+<p></p>
+<p><img src="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/pdfjs.png" srcset="/img/loading.gif" lazyload alt="PDF标注页面"></p>
+<p><font color="darkblue" size="2"></font></p>
+<ol start="5" type="1">
+<li>PDF 标注时的任何操作都会在左侧新建一个 mindmap
+的节点，唯一需要注意的是在生成节点前选择父节点。</li>
+</ol>
+<p>
+<img src="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/mindmap.png" srcset="/img/loading.gif" lazyload alt="思维导图页面"></p>
+<h6 id="不足">不足</h6>
+<p><font color="blown" size="2">
+可能翻译不如zotero好用，但是借助沙拉取词也可以实现ob界面翻译。
+</font></p>
 
                 
               </div>
@@ -376,11 +409,7 @@ xeboiboites 实现，首先构建 boxes： </font></p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/csdiy/">#csdiy</a>
-      
-        <a href="/tags/latex/">#latex</a>
-      
-        <a href="/tags/cs61a/">#cs61a</a>
+        <a href="/tags/obsidian%E5%B7%A5%E4%BD%9C%E6%B5%81/">#obsidian工作流</a>
       
     </div>
   
@@ -392,8 +421,8 @@ xeboiboites 实现，首先构建 boxes： </font></p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>LaTex笔记001-借助nexus模板</div>
-      <div>https://csdecoder.tk/2022/12/27/latex-init/</div>
+      <div>在obsidian中实现PDF标注并同步建立Mindmap</div>
+      <div>https://csdecoder.tk/2022/12/28/mindmap-pdfjs/</div>
     </div>
     <div class="license-meta">
       
@@ -405,7 +434,7 @@ xeboiboites 实现，首先构建 boxes： </font></p>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年12月27日</div>
+          <div>2022年12月28日</div>
         </div>
       
       
@@ -437,18 +466,12 @@ xeboiboites 实现，首先构建 boxes： </font></p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/12/28/mindmap-pdfjs/" title="在obsidian中实现PDF标注并同步建立Mindmap">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">在obsidian中实现PDF标注并同步建立Mindmap</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/12/20/cs-tools/" title="必备工具学习 + Vscode-LaTex环境配置">
-                        <span class="hidden-mobile">必备工具学习 + Vscode-LaTex环境配置</span>
+                      <a href="/2022/12/27/latex-init/" title="LaTex笔记001-借助nexus模板">
+                        <span class="hidden-mobile">LaTex笔记001-借助nexus模板</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

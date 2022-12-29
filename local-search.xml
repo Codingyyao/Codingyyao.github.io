@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>在obsidian中实现PDF标注并同步建立Mindmap</title>
+    <link href="/2022/12/28/mindmap-pdfjs/"/>
+    <url>/2022/12/28/mindmap-pdfjs/</url>
+    
+    <content type="html"><![CDATA[<h5 id="主要内容">主要内容</h5><p><font color="black" size="2"></font></p><p>使用 <code>obsidian</code> 做笔记的时候，不想再打开文献管理软件<code>zotero</code> 查看 PDF 文件。</p><p>发现可以利用插件 <code>makemind</code> 和 <code>PDFjs</code>直接实现在 ob 里面直接标注 PDF文件，同时还可以直接建立对应的思维导图。</p><p>感觉是非常不错的辅助工作流，记录下主要步骤。</p><p></p><h5 id="参考链接">参考链接</h5><blockquote><p><a href="https://github.com/MarkMindCkm/obsidian-markmind/blob/main/docs/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md">obsidianmark mind 用户手册</a></p><p><a href="https://github.com/MarkMindCkm/obsidian-markmind/releases/download/1.5.9/pdfjs.zip">PC端 PDFjs 下载地址</a></p></blockquote><h6 id="安装插件">(1) 安装插件</h6><p><font color="darkblue" size="2"></font></p><ol type="1"><li><p>安装第三方插件 makemind，直接在 ob 插件库检索安装即可;</p></li><li><p>PDFjs 直接下载，解压后，记录下绝对路径<code>~/PDFjs/</code>;</p></li></ol><p></p><h6 id="插件设置">(2) 插件设置</h6><p><font color="darkblue" size="2"></font></p><ol type="1"><li>在 makemind 插件设置界面，将 PDFjs 的<b>绝对路径</b>填入；</li><li>打开 makemind 的<b>协议跳转 pdf </b>选项；</li><li>打开 makemind <b>自动生成节点</b>选项；</li><li>其它选项可选择性自定义，比如 PDF image 的默认保存地址；</li></ol><p></p><h6 id="思维导图和-pdf-标注使用">(3) 思维导图和 PDF 标注使用</h6><p><font color="darkblue" size="2"></font></p><ol type="1"><li>新建思维导图文件，yaml 写法如下：</li></ol><p></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">mindmap-plugin:</span> <span class="hljs-string">rich</span><br><span class="hljs-attr">display-mode:</span> <span class="hljs-string">outline</span> <span class="hljs-comment"># 大纲显示</span><br><span class="hljs-attr">mindmap-theme:</span> <span class="hljs-string">whiteboard</span> <span class="hljs-comment"># mindmap 主题</span><br></code></pre></td></tr></table></figure><p><font color="darkblue" size="2"></font></p><ol start="2" type="1"><li>在文件中链接 PDF 文件</li></ol><p> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">[[fielname.pdf]]<br></code></pre></td></tr></table></figure></p><p><font color="darkblue" size="2"></font></p><ol start="3" type="1"><li>点击 PDF 文件链接即可跳转至 PDFjs标注界面，选择思维导图视图即可查看当前思维导图，界面示例如下：</li></ol><p><img src="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/page.png" alt="ob页面布局"></p><p><font color="darkblue" size="2"></font></p><ol start="4" type="1"><li>PDFjs 标注界面可以标注不同颜色，可以在左侧添加notes，也可以在右上角使用截图。</li></ol><p></p><p><img src="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/pdfjs.png" alt="PDF标注页面"></p><p><font color="darkblue" size="2"></font></p><ol start="5" type="1"><li>PDF 标注时的任何操作都会在左侧新建一个 mindmap的节点，唯一需要注意的是在生成节点前选择父节点。</li></ol><p><img src="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/mindmap.png" alt="思维导图页面"></p><h6 id="不足">不足</h6><p><font color="blown" size="2">可能翻译不如zotero好用，但是借助沙拉取词也可以实现ob界面翻译。</font></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Tools</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>obsidian工作流</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>LaTex笔记001-借助nexus模板</title>
     <link href="/2022/12/27/latex-init/"/>
     <url>/2022/12/27/latex-init/</url>
@@ -14,8 +39,6 @@
     <categories>
       
       <category>Tools</category>
-      
-      <category>cs-sandbox</category>
       
     </categories>
     
