@@ -110,20 +110,6 @@
 
   
   <url>
-    <loc>https://codingyyao.github.io/tags/csdiy/</loc>
-    <lastmod>2024-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://codingyyao.github.io/tags/Hexo%E6%90%AD%E5%BB%BAblog/</loc>
-    <lastmod>2024-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://codingyyao.github.io/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%BC%98%E5%8C%96SEO/</loc>
     <lastmod>2024-08-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -138,6 +124,13 @@
   </url>
   
   <url>
+    <loc>https://codingyyao.github.io/tags/csdiy/</loc>
+    <lastmod>2024-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://codingyyao.github.io/tags/vscode/</loc>
     <lastmod>2024-08-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -146,6 +139,13 @@
   
   <url>
     <loc>https://codingyyao.github.io/tags/latex/</loc>
+    <lastmod>2024-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://codingyyao.github.io/tags/Hexo%E6%90%AD%E5%BB%BAblog/</loc>
     <lastmod>2024-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -168,13 +168,6 @@
 
   
   <url>
-    <loc>https://codingyyao.github.io/categories/cs-sandbox/</loc>
-    <lastmod>2024-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://codingyyao.github.io/categories/Blogs/</loc>
     <lastmod>2024-08-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -183,6 +176,13 @@
   
   <url>
     <loc>https://codingyyao.github.io/categories/Tools/</loc>
+    <lastmod>2024-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://codingyyao.github.io/categories/cs-sandbox/</loc>
     <lastmod>2024-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
