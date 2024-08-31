@@ -18,22 +18,22 @@
   <meta name="author" content="yuyao yang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="主要内容  使用 obsidian 做笔记的时候，不想再打开文献管理软件 zotero 查看 PDF 文件。 发现可以利用插件 makemind 和 PDFjs 直接实现在 ob 里面直接标注 PDF 文件，同时还可以直接建立对应的思维导图。 感觉是非常不错的辅助工作流，记录下主要步骤。  参考链接  obsidian mark mind 用户手册 PC 端 PDFjs">
+    <meta name="description" content="主要内容  使用 obsidian 做笔记的时候，不想再打开文献管理软件 zotero 查看 PDF 文件。 发现可以利用插件 makemind 和 PDFjs 直接实现在 ob 里面直接标注 PDF 文件，同时还可以直接建立对应的思维导图。 感觉是非常不错的辅助工作流，记录下主要步骤。  参考链接  obsidian mark mind 用户手册 PC 端 PDFjs 下载地址">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在obsidian中实现PDF标注并同步建立Mindmap">
-<meta property="og:url" content="https://codingyyao.github.io/2022/12/29/mindmap-pdfjs/index.html">
+<meta property="og:url" content="https://codingyyao.github.io/2022/12/28/mindmap-pdfjs/index.html">
 <meta property="og:site_name" content="Yao&#39;s blog">
-<meta property="og:description" content="主要内容  使用 obsidian 做笔记的时候，不想再打开文献管理软件 zotero 查看 PDF 文件。 发现可以利用插件 makemind 和 PDFjs 直接实现在 ob 里面直接标注 PDF 文件，同时还可以直接建立对应的思维导图。 感觉是非常不错的辅助工作流，记录下主要步骤。  参考链接  obsidian mark mind 用户手册 PC 端 PDFjs">
+<meta property="og:description" content="主要内容  使用 obsidian 做笔记的时候，不想再打开文献管理软件 zotero 查看 PDF 文件。 发现可以利用插件 makemind 和 PDFjs 直接实现在 ob 里面直接标注 PDF 文件，同时还可以直接建立对应的思维导图。 感觉是非常不错的辅助工作流，记录下主要步骤。  参考链接  obsidian mark mind 用户手册 PC 端 PDFjs 下载地址">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/page.png">
-<meta property="og:image" content="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/pdfjs.png">
-<meta property="og:image" content="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/mindmap.png">
-<meta property="article:published_time" content="2022-12-29T07:49:52.000Z">
-<meta property="article:modified_time" content="2022-12-29T08:35:38.132Z">
+<meta property="og:image" content="https://codingyyao.github.io/2022/12/28/mindmap-pdfjs/page.png">
+<meta property="og:image" content="https://codingyyao.github.io/2022/12/28/mindmap-pdfjs/pdfjs.png">
+<meta property="og:image" content="https://codingyyao.github.io/2022/12/28/mindmap-pdfjs/mindmap.png">
+<meta property="article:published_time" content="2022-12-28T15:49:52.000Z">
+<meta property="article:modified_time" content="2024-08-31T08:04:04.986Z">
 <meta property="article:author" content="yuyao yang">
 <meta property="article:tag" content="obsidian工作流">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/page.png">
+<meta name="twitter:image" content="https://codingyyao.github.io/2022/12/28/mindmap-pdfjs/page.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -232,8 +232,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-12-29 15:49" pubdate>
-          2022年12月29日 下午
+        <time datetime="2022-12-28 23:49" pubdate>
+          2022年12月28日 晚上
         </time>
       </span>
     
@@ -308,26 +308,20 @@
                 
                 <h5 id="主要内容">主要内容</h5>
 <p><font color="black" size="2"></font></p>
-<p>使用 <code>obsidian</code> 做笔记的时候，不想再打开文献管理软件
-<code>zotero</code> 查看 PDF 文件。</p>
-<p>发现可以利用插件 <code>makemind</code> 和 <code>PDFjs</code>
-直接实现在 ob 里面直接标注 PDF
-文件，同时还可以直接建立对应的思维导图。</p>
+<p>使用 <code>obsidian</code> 做笔记的时候，不想再打开文献管理软件 <code>zotero</code> 查看 PDF 文件。</p>
+<p>发现可以利用插件 <code>makemind</code> 和 <code>PDFjs</code> 直接实现在 ob 里面直接标注 PDF 文件，同时还可以直接建立对应的思维导图。</p>
 <p>感觉是非常不错的辅助工作流，记录下主要步骤。</p>
 <p></p>
 <h5 id="参考链接">参考链接</h5>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/MarkMindCkm/obsidian-markmind/blob/main/docs/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md">obsidian
-mark mind 用户手册</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/MarkMindCkm/obsidian-markmind/releases/download/1.5.9/pdfjs.zip">PC
-端 PDFjs 下载地址</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/MarkMindCkm/obsidian-markmind/blob/main/docs/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md">obsidian mark mind 用户手册</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/MarkMindCkm/obsidian-markmind/releases/download/1.5.9/pdfjs.zip">PC 端 PDFjs 下载地址</a></p>
 </blockquote>
 <h6 id="安装插件">(1) 安装插件</h6>
 <p><font color="darkblue" size="2"></font></p>
 <ol type="1">
 <li><p>安装第三方插件 makemind，直接在 ob 插件库检索安装即可;</p></li>
-<li><p>PDFjs 直接下载，解压后，记录下绝对路径
-<code>~/PDFjs/</code>;</p></li>
+<li><p>PDFjs 直接下载，解压后，记录下绝对路径 <code>~/PDFjs/</code>;</p></li>
 </ol>
 <p></p>
 <h6 id="插件设置">(2) 插件设置</h6>
@@ -353,29 +347,22 @@ mark mind 用户手册</a></p>
 <p> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">[[fielname.pdf]]<br></code></pre></td></tr></table></figure></p>
 <p><font color="darkblue" size="2"></font></p>
 <ol start="3" type="1">
-<li>点击 PDF 文件链接即可跳转至 PDFjs
-标注界面，选择思维导图视图即可查看当前思维导图，界面示例如下：</li>
+<li>点击 PDF 文件链接即可跳转至 PDFjs 标注界面，选择思维导图视图即可查看当前思维导图，界面示例如下：</li>
 </ol>
-<p>
-<img src="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/page.png" srcset="/img/loading.gif" lazyload alt="ob页面布局"></p>
+<p> <img src="https://codingyyao.github.io/2022/12/28/mindmap-pdfjs/page.png" srcset="/img/loading.gif" lazyload alt="ob页面布局"></p>
 <p><font color="darkblue" size="2"></font></p>
 <ol start="4" type="1">
-<li>PDFjs 标注界面可以标注不同颜色，可以在左侧添加
-notes，也可以在右上角使用截图。</li>
+<li>PDFjs 标注界面可以标注不同颜色，可以在左侧添加 notes，也可以在右上角使用截图。</li>
 </ol>
 <p></p>
-<p><img src="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/pdfjs.png" srcset="/img/loading.gif" lazyload alt="PDF标注页面"></p>
+<p><img src="https://codingyyao.github.io/2022/12/28/mindmap-pdfjs/pdfjs.png" srcset="/img/loading.gif" lazyload alt="PDF标注页面"></p>
 <p><font color="darkblue" size="2"></font></p>
 <ol start="5" type="1">
-<li>PDF 标注时的任何操作都会在左侧新建一个 mindmap
-的节点，唯一需要注意的是在生成节点前选择父节点。</li>
+<li>PDF 标注时的任何操作都会在左侧新建一个 mindmap 的节点，唯一需要注意的是在生成节点前选择父节点。</li>
 </ol>
-<p>
-<img src="https://csdecoder.tk/2022/12/28/mindmap-pdfjs/mindmap.png" srcset="/img/loading.gif" lazyload alt="思维导图页面"></p>
+<p> <img src="https://codingyyao.github.io/2022/12/28/mindmap-pdfjs/mindmap.png" srcset="/img/loading.gif" lazyload alt="思维导图页面"></p>
 <h6 id="不足">不足</h6>
-<p><font color="blown" size="2">
-可能翻译不如zotero好用，但是借助沙拉取词也可以实现ob界面翻译。
-</font></p>
+<p><font color="blown" size="2"> 可能翻译不如zotero好用，但是借助沙拉取词也可以实现ob界面翻译。 </font></p>
 
                 
               </div>
@@ -422,7 +409,7 @@ notes，也可以在右上角使用截图。</li>
   <div class="license-box my-3">
     <div class="license-title">
       <div>在obsidian中实现PDF标注并同步建立Mindmap</div>
-      <div>https://codingyyao.github.io/2022/12/29/mindmap-pdfjs/</div>
+      <div>https://codingyyao.github.io/2022/12/28/mindmap-pdfjs/</div>
     </div>
     <div class="license-meta">
       
@@ -434,7 +421,7 @@ notes，也可以在右上角使用截图。</li>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年12月29日</div>
+          <div>2022年12月28日</div>
         </div>
       
       
